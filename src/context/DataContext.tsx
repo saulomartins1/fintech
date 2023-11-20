@@ -46,6 +46,10 @@ export const DataContextProvider = ({ children }: React.PropsWithChildren) => {
     const { data, loading, error } =
         useFetch<IVenda[]>(`https://data.origamid.dev/vendas/?inicio=${inicio}&final=${final}`);
 
+    if (data) {
+        console.log(data);
+    }
+
 
     return <DataContext.Provider value={{ data, loading, error, inicio, setInicio, final, setFinal }}>{children}</ DataContext.Provider>
 }

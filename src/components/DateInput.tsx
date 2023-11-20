@@ -29,7 +29,7 @@ function DateInput({ id, label, onChange, ...rest }: IDateInput) {
     return (
         <div>
             <label style={labelStyle} htmlFor={id}>{label}</label>
-            <input style={inputStyle} id={id} onChange={onChange} name={label} type="date" />
+            <input style={inputStyle} id={id} onChange={onChange} name={label} type="date" {...rest} />
         </div>
     )
 }

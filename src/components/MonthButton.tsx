@@ -1,4 +1,5 @@
 import React from 'react'
+import { useData } from '../context/DataContext';
 
 const buttonStyle: React.CSSProperties = {
     padding: "var(--gap) var(--gap-s)",
@@ -17,9 +18,28 @@ function nomeMes(n: number) {
     return nome;
 }
 
+function formatDate(date: Date) {
+    const dd = String(date.getDate()).padStart(2, "0");
+    const mm = String(date.getMonth() + 1).padStart(2, "0");
+    const yyyy = date.getFullYear();
+    return `${yyyy}-${mm}-${dd}`;
+}
+
 function MonthButton({ n }: { n: number; }) {
+    const { setInicio, setFinal } = useData();
+
+    function setMes(n: number) {
+        const date = new Date();
+        date.setMonth(date.getMonth() + n)
+        const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+        const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+        setInicio(formatDate(firstDay));
+        setFinal(formatDate(lastDay));
+    }
+
+
     return (
-        <button style={buttonStyle}>{nomeMes(n)}</button>
+        <button onClick={() => setMes(n)} style={buttonStyle}>{nomeMes(n)}</button>
     )
 }
 
