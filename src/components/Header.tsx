@@ -1,8 +1,9 @@
 import React from 'react'
+import DateRange from './DateRange'
 
 function Header() {
     return (
-        <header>Header</header>
+        <DateRange />
     )
 }
 
