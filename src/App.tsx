@@ -3,17 +3,20 @@ import Header from './components/Header'
 import SideNav from './components/SideNav'
 import Resumo from './pages/Resumo'
 import "./App.css"
+import { DataContextProvider } from './context/DataContext'
 
 function App() {
 
 	return (
-		<div>
-			<SideNav />
-			<main>
-				<Header />
-				<Resumo />
-			</main>
-		</div>
+		<DataContextProvider>
+			<div>
+				<SideNav />
+				<main>
+					<Header />
+					<Resumo />
+				</main>
+			</div>
+		</DataContextProvider>
 	)
 }
 
