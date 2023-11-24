@@ -11,7 +11,7 @@ type IDataContext = {
     setFinal: React.Dispatch<React.SetStateAction<string>>;
 }
 
-type IVenda = {
+export type IVenda = {
     id: string;
     nome: string;
     preco: number;
@@ -48,6 +48,8 @@ export const DataContextProvider = ({ children }: React.PropsWithChildren) => {
 
     if (data) {
         console.log(data);
+    } else {
+        console.log("Erro")
     }
 
 

@@ -36,6 +36,7 @@ function Resumo() {
                     </span>
                 </div>
             </div>
+            <div className="box mb">Gráficos</div>
         </section>
     )
 }

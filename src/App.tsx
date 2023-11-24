@@ -4,6 +4,7 @@ import SideNav from './components/SideNav'
 import Resumo from './pages/Resumo'
 import "./App.css"
 import { DataContextProvider } from './context/DataContext'
+import Vendas from './pages/Vendas'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
 				<main>
 					<Header />
 					<Resumo />
+					<Vendas />
 				</main>
 			</div>
 		</DataContextProvider>
