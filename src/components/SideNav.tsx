@@ -6,6 +6,7 @@ import webhooks from '../assets/icons/webhooks.svg'
 import configs from '../assets/icons/configuracoes.svg'
 import contato from '../assets/icons/contato.svg'
 import sair from '../assets/icons/sair.svg'
+import { NavLink } from 'react-router-dom'
 
 
 function SideNav() {
@@ -15,37 +16,37 @@ function SideNav() {
             <ul>
                 <li>
                     <span><img src={resumo} alt="" /></span>
-                    <a href="#">Resumo</a>
+                    <NavLink to="/">Resumo</NavLink>
                 </li>
             </ul>
             <ul>
                 <li>
                     <span><img src={vendas} alt="" /></span>
-                    <a href="#">Vendas</a>
+                    <NavLink to="/vendas">Vendas</NavLink>
                 </li>
             </ul>
             <ul>
                 <li>
                     <span><img src={webhooks} alt="" /></span>
-                    <a>Webhooks</a>
+                    <NavLink to="/">Webhooks</NavLink>
                 </li>
             </ul>
             <ul>
                 <li>
                     <span><img src={configs} alt="" /></span>
-                    <a>Configuracoes</a>
+                    <NavLink to="/">Configurações</NavLink>
                 </li>
             </ul>
             <ul>
                 <li>
                     <span><img src={contato} alt="" /></span>
-                    <a>Contato</a>
+                    <NavLink to="/">Contato</NavLink>
                 </li>
             </ul>
             <ul>
                 <li>
                     <span><img src={sair} alt="" /></span>
-                    <a>Sair</a>
+                    <NavLink to="/">Sair</NavLink>
                 </li>
             </ul>
         </aside>
