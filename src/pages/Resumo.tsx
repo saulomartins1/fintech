@@ -1,4 +1,5 @@
 import React from 'react'
+import ChartVenda from '../components/ChartVenda';
 import { useData } from '../context/DataContext';
 
 function Resumo() {
@@ -36,7 +37,9 @@ function Resumo() {
                     </span>
                 </div>
             </div>
-            <div className="box mb">Gráficos</div>
+            <div className="box mb">
+                <ChartVenda data={data} />
+            </div>
         </section>
     )
 }

@@ -98,6 +98,7 @@ ul {
 	text-decoration: none;
 	color: var(--color-1);
 	padding: var(--gap-s) 0;
+	margin: .2rem 0;
 }
 
 .sidenav li:hover span {
